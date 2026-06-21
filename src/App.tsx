@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import StatsBar from "./components/StatsBar";
 import About from "./components/About";
 import Services from "./components/Services";
 import ProjectsBlock from "./components/Projects";
@@ -13,7 +14,7 @@ import { motion } from "motion/react";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col font-sans antialiased text-gray-200 bg-[#030712] overflow-x-hidden">
+    <div className="min-h-screen flex flex-col font-sans antialiased text-slate-900 bg-white overflow-x-hidden">
       {/* Sticky Top Glassmorphic Navbar */}
       <Navbar />
 
@@ -21,6 +22,9 @@ export default function App() {
       <main className="flex-grow">
         {/* Hero Section of systems architect blueprint */}
         <Hero />
+
+        {/* Stats Bar */}
+        <StatsBar />
 
         {/* About Section */}
         <motion.div

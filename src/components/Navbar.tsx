@@ -71,7 +71,7 @@ export default function Navbar() {
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#030712]/80 backdrop-blur-md border-b border-white/[0.06] py-3" 
+          ? "bg-white/80 backdrop-blur-md border-b border-slate-200 py-3" 
           : "bg-transparent border-b border-transparent py-5"
       }`}
     >
@@ -81,18 +81,18 @@ export default function Navbar() {
           href="#hero" 
           id="nav-logo"
           onClick={(e) => handleLinkClick(e, "#hero")}
-          className="group flex items-center gap-2 text-xl font-extrabold tracking-tight text-white focus:outline-none"
+          className="group flex items-center gap-2 text-xl font-extrabold tracking-tight text-slate-900 focus:outline-none"
         >
-          <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-primary to-[#2ee59d] flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-            <span className="text-[14px] font-black text-dark-bg">D</span>
+          <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-primary to-primary-dark flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+            <span className="text-[14px] font-black text-white">D</span>
           </div>
           <span>
-            Diinbadan<span className="text-primary transition-all group-hover:text-primary-text">e</span>
+            Diinbadan<span className="text-primary transition-all group-hover:text-primary-dark">e</span>
           </span>
         </a>
 
         {/* Desktop Navigation Link Cluster */}
-        <nav className="hidden md:flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.05] rounded-full p-1.5">
+        <nav className="hidden md:flex items-center gap-1.5 bg-slate-100/80 border border-slate-200/60 rounded-full p-1.5">
           {navLinks.map((link) => {
             const id = link.href.slice(1);
             const isActive = activeSection === id;
@@ -105,7 +105,7 @@ export default function Navbar() {
                 className={`text-[13px] font-medium px-4 py-1.5 rounded-full transition-all duration-200 relative ${
                   isActive 
                     ? "text-primary bg-primary-light font-bold" 
-                    : "text-gray-400 hover:text-white"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 {link.name}
@@ -130,7 +130,7 @@ export default function Navbar() {
         <button
           id="mobile-menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center rounded-xl p-2.5 text-gray-400 hover:bg-white/[0.05] hover:text-white md:hidden border border-white/[0.05]"
+          className="flex items-center justify-center rounded-xl p-2.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900 md:hidden border border-slate-200"
           aria-label="Toggle navigation drawer"
         >
           {isOpen ? <X className="h-5 w-5" id="icon-close" /> : <Menu className="h-5 w-5" id="icon-menu" />}
@@ -146,10 +146,10 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 top-full w-full bg-[#030712]/95 border-b border-white/[0.08] backdrop-blur-xl md:hidden"
+            className="absolute left-0 top-full w-full bg-white/95 border-b border-slate-200 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-2 px-6 py-6 max-h-[80vh] overflow-y-auto">
-              <p className="text-[10px] font-extrabold uppercase tracking-widest text-gray-500 mb-2">Navigation System</p>
+              <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">Navigation System</p>
               {navLinks.map((link) => {
                 const id = link.href.slice(1);
                 const isActive = activeSection === id;
@@ -162,7 +162,7 @@ export default function Navbar() {
                     className={`text-sm font-semibold py-3.5 px-4 rounded-xl transition-all flex items-center justify-between ${
                       isActive 
                         ? "bg-primary-light text-primary border-l-4 border-primary pl-4" 
-                        : "text-gray-300 hover:bg-white/[0.03] hover:text-white"
+                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                     }`}
                   >
                     {link.name}
