@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1D9E75;
+  --color-primary-dark: #178a63;
+  --color-primary-darker: #14795A;
+  --color-primary-light: rgba(29, 158, 117, 0.15);
+  --color-primary-text: #2ee59d;
+  --color-brand-navy: #0F172A;
+  
+  --color-dark-bg: #030712;
+  --color-dark-card: rgba(17, 24, 39, 0.4);
+  --color-dark-border: rgba(255, 255, 255, 0.05);
+  --color-dark-text-muted: #9ca3af;
+  
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", monospace;
+  
+  --shadow-glow: 0 0 20px rgba(29, 158, 117, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-bg);
+  background-image: 
+    radial-gradient(at 50% 0px, rgba(29, 158, 117, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 50%, rgba(15, 23, 42, 0.3) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism custom effects */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-heavy {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-card:hover {
+  border-color: rgba(29, 158, 117, 0.3);
+  box-shadow: 0 0 30px rgba(29, 158, 117, 0.1);
+}
+
+/* Beautiful animated gradient lines */
+.glow-border {
+  position: relative;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to right, rgba(29, 158, 117, 0.3), transparent, rgba(29, 158, 117, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1D9E75;
+}
+
+/* Elegant text formatting */
+.tech-glow-text {
+  text-shadow: 0 0 10px rgba(46, 229, 157, 0.2);
+}
