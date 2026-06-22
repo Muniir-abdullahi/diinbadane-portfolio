@@ -3,6 +3,7 @@ import { Lock } from "lucide-react";
 import { ClientProject } from "../lib/data";
 
 interface ClientProjectItemProps {
+  key?: React.Key;
   project: ClientProject;
   index: number;
 }

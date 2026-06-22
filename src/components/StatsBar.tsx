@@ -34,7 +34,7 @@ export default function StatsBar() {
             >
               {stat.value}
             </span>
-            <span className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest mt-1 font-semibold">
+            <span className="text-[10px] md:text-xs text-gray-400 uppercase tracking-[0.5px] mt-1 font-semibold">
               {stat.label}
             </span>
           </div>

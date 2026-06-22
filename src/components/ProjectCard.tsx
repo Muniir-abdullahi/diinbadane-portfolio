@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { OwnProject } from "../lib/data";
 
 interface ProjectCardProps {
+  key?: React.Key;
   project: OwnProject;
   index: number;
 }
