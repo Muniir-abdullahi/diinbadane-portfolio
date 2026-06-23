@@ -94,8 +94,8 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Multi-row list layout (always single column, full width) */}
-          <div className="grid grid-cols-1 gap-5" id="client-projects-list">
+          {/* Multi-row list layout */}
+          <div className="flex flex-col gap-4" id="client-projects-list">
             {clientProjects.map((project, index) => (
               <ClientProjectItem key={index} project={project} index={index} />
             ))}

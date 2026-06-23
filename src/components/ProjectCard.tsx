@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <div 
       id={`project-card-${index}`}
-      className="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none rounded-xl p-7 hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors flex flex-col justify-between min-h-[320px]"
+      className="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none rounded-xl p-6 hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors flex flex-col h-full"
     >
       <div className="space-y-4">
         {/* Eyebrow Label */}
@@ -32,23 +32,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <p id={`project-desc-${index}`} className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           {project.description}
         </p>
-
-        {/* Stack Badges */}
-        <div id={`project-stack-${index}`} className="flex flex-wrap gap-1.5 pt-2">
-          {project.stack.map((tech, i) => (
-            <span 
-              key={i} 
-              id={`project-tech-${index}-${i}`}
-              className="bg-slate-100 dark:bg-slate-900/50 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* Link Row */}
-      <div className="pt-6 border-t border-slate-100 dark:border-white/5 mt-6">
+      <div className="pt-5 border-t border-slate-100 dark:border-white/5 mt-auto">
         {isLive ? (
           <a 
             id={`project-link-${index}`}
