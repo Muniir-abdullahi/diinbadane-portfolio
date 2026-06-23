@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <div 
       id={`project-card-${index}`}
-      className="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 rounded-xl p-7 hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors flex flex-col justify-between min-h-[320px]"
+      className="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none rounded-xl p-7 hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors flex flex-col justify-between min-h-[320px]"
     >
       <div className="space-y-4">
         {/* Eyebrow Label */}
@@ -39,7 +39,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <span 
               key={i} 
               id={`project-tech-${index}-${i}`}
-              className="bg-slate-100 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-white/5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
+              className="bg-slate-100 dark:bg-slate-900/50 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
             >
               {tech}
             </span>

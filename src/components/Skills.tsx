@@ -25,7 +25,7 @@ export default function Skills() {
         </div>
 
         {/* Unified Table-like Grid */}
-        <div className="border border-slate-200 dark:border-white/5 rounded-2xl overflow-hidden bg-white dark:bg-slate-800/30" id="skills-grid">
+        <div className="border border-slate-200 dark:border-white/5 rounded-2xl overflow-hidden bg-white dark:bg-slate-800/30 shadow-sm dark:shadow-none" id="skills-grid">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {skills.map((skillGroup, index) => {
               // Calculate borders dynamically to prevent double borders

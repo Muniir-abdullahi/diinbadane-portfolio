@@ -35,7 +35,7 @@ export default function Projects() {
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 Commercial Products
-                <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1 bg-emerald-500/10 dark:bg-slate-800 border border-emerald-500/15 dark:border-slate-700 text-emerald-600 dark:text-slate-300 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
                   Active SaaS Suite
                 </span>
               </h3>
@@ -84,7 +84,7 @@ export default function Projects() {
             <div className="max-w-2xl">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 Featured Projects & Integrations
-                <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest">
+                <span className="inline-flex items-center gap-1 bg-emerald-500/10 dark:bg-slate-800 text-emerald-600 dark:text-slate-300 border border-emerald-500/15 dark:border-slate-700 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest">
                   <Lock className="h-3 w-3" /> Confidential
                 </span>
               </h3>

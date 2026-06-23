@@ -41,7 +41,7 @@ export default function Hero() {
             {/* Availability Pill */}
             <div className="inline-flex">
               <span 
-                className="inline-flex items-center gap-2 rounded-md bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50 px-3 py-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400"
+                className="inline-flex items-center gap-2 rounded-md bg-emerald-500/10 dark:bg-emerald-900/30 border border-emerald-500/15 dark:border-emerald-800/50 px-3 py-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400"
                 id="badge-hero-available"
               >
                 <span className="relative flex h-1.5 w-1.5">

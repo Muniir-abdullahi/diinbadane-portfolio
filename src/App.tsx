@@ -38,7 +38,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans antialiased text-slate-900 bg-white dark:bg-slate-900 dark:text-slate-400 overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-900 dark:selection:text-white transition-colors duration-300">
+    <div className="min-h-screen flex flex-col font-sans antialiased text-slate-900 bg-slate-50 dark:bg-slate-900 dark:text-slate-400 overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-900 dark:selection:text-white transition-colors duration-300">
       {/* Sticky Top Glassmorphic Navbar */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 

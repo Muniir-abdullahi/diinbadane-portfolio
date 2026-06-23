@@ -70,7 +70,7 @@ export default function About() {
             <div 
               key={idx}
               id={`about-focus-card-${idx}`}
-              className="bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+              className="bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none p-6 rounded-2xl hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors"
             >
               <div className="mb-4 text-emerald-600 dark:text-slate-500">
                 {area.icon}

@@ -34,7 +34,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="bg-brand-navy w-full text-white">
+    <div className="bg-slate-50 dark:bg-slate-900 w-full transition-colors duration-300">
       <section id="contact" className="py-24 px-6 max-w-5xl mx-auto container relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -43,17 +43,17 @@ export default function Contact() {
             <div>
               <span 
                 id="contact-label"
-                className="text-xs font-bold tracking-widest text-primary uppercase block mb-2"
+                className="text-xs font-bold tracking-widest text-emerald-600 dark:text-emerald-500 uppercase block mb-2"
               >
                 COMMISSION AND QUERY
               </span>
               <h2 
                 id="contact-heading"
-                className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-3"
+                className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3"
               >
                 Let's Build Something Valuable
               </h2>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Have a complex business workflow or a multi-tenant platform requirement? Reach out via any of my secure channels to discuss the technical architecture.
               </p>
             </div>
@@ -68,19 +68,19 @@ export default function Contact() {
                 href={method.href}
                 target={method.name !== "Direct Email" ? "_blank" : undefined}
                 rel={method.name !== "Direct Email" ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                className="flex items-center gap-4 p-5 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 shadow-sm hover:border-slate-300 dark:hover:bg-slate-800/60 transition-colors group"
               >
-                <div className="p-3 bg-white/5 border border-white/10 rounded-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 rounded-xl group-hover:scale-105 transition-transform duration-300">
                   {method.icon}
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="text-[10px] uppercase font-bold text-gray-400 tracking-wider font-mono">
+                  <h4 className="text-[10px] uppercase font-bold text-slate-500 tracking-wider font-mono">
                     {method.name}
                   </h4>
-                  <p className="text-white font-medium text-sm">
+                  <p className="text-slate-900 dark:text-white font-medium text-sm">
                     {method.value}
                   </p>
-                  <p className="text-[10px] text-gray-400">
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400">
                     {method.tagline}
                   </p>
                 </div>
