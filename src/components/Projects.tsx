@@ -6,7 +6,7 @@ import ClientProjectItem from "./ClientProjectItem";
 
 export default function Projects() {
   return (
-    <div className="bg-slate-50 w-full">
+    <div className="w-full bg-slate-50 dark:bg-transparent transition-colors duration-300">
       <section id="projects" className="py-24 px-6 max-w-5xl mx-auto container space-y-24 relative">
         <div className="absolute top-[40%] right-0 h-[300px] w-[300px] rounded-full bg-primary/10 opacity-15 blur-[100px]" />
 
@@ -20,27 +20,27 @@ export default function Projects() {
           </span>
           <h2 
             id="projects-heading"
-            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-2"
+            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-2"
           >
-            Enterprise architecture & commercial SaaS engines
+            Systems architecture & commercial SaaS engines
           </h2>
-          <p className="text-sm text-slate-650 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
             Explore production-grade digital assets built as direct commercial products or secure client integrations under strict NDA.
           </p>
         </div>
 
         {/* SUBSECTION A: "My Work" */}
         <div id="projects-own-work" className="space-y-8">
-          <div className="border-b border-slate-200 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div className="border-b border-slate-200 dark:border-white/5 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 Commercial Products
-                <span className="inline-flex items-center gap-1 bg-primary-light border border-primary/20 text-primary-darker rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
                   Active SaaS Suite
                 </span>
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Active web environments engineered under <strong className="text-primary">Rukun Software Studio</strong>.
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                Active web environments engineered under <strong className="text-slate-900 dark:text-white font-medium">Rukun Software Studio</strong>.
               </p>
             </div>
             
@@ -69,7 +69,7 @@ export default function Projects() {
               href="https://rukun.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-primary transition-all group bg-white border border-slate-200 hover:border-primary/20 rounded-full px-5 py-2.5"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-white transition-all group bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 rounded-lg px-5 py-2.5"
               id="link-visit-rukun-footer"
             >
               Explore the complete Rukun brand suite at rukun.app
@@ -79,16 +79,16 @@ export default function Projects() {
         </div>
 
         {/* SUBSECTION B: "Client Work (Confidential)" */}
-        <div id="projects-client-work" className="space-y-8 pt-10 border-t border-slate-200">
+        <div id="projects-client-work" className="space-y-8 pt-10 border-t border-slate-200 dark:border-white/5">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="max-w-2xl">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 Featured Projects & Integrations
-                <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest">
+                <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest">
                   <Lock className="h-3 w-3" /> Confidential
                 </span>
               </h3>
-              <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
                 Select contract works delivered under standard NDA. Described with focus on system architectures and specific technical outcomes.
               </p>
             </div>
@@ -102,9 +102,9 @@ export default function Projects() {
           </div>
 
           {/* NDA notice */}
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 flex items-start gap-3" id="nda-compliance-notice">
-            <ShieldCheck className="h-4.5 w-4.5 text-primary mt-0.5 flex-shrink-0" />
-            <p className="text-xs text-gray-500 leading-relaxed">
+          <div className="bg-slate-100 dark:bg-slate-800/30 border border-slate-200 dark:border-white/5 rounded-lg p-4 flex items-start gap-3" id="nda-compliance-notice">
+            <ShieldCheck className="h-4.5 w-4.5 text-slate-500 mt-0.5 flex-shrink-0" />
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               <strong>Confidentiality Note:</strong> Names and branding have been altered under Non-Disclosure Agreements. System architectures and outcomes represent the actual delivery scope.
             </p>
           </div>

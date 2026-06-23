@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-export default function Navbar() {
+interface NavbarProps {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
     { name: "Stack", href: "#stack" },
     { name: "Process", href: "#process" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -71,7 +73,7 @@ export default function Navbar() {
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
-          ? "bg-white/80 backdrop-blur-md border-b border-slate-200 py-3" 
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-white/5 py-3" 
           : "bg-transparent border-b border-transparent py-5"
       }`}
     >
@@ -81,18 +83,18 @@ export default function Navbar() {
           href="#hero" 
           id="nav-logo"
           onClick={(e) => handleLinkClick(e, "#hero")}
-          className="group flex items-center gap-2 text-xl font-extrabold tracking-tight text-slate-900 focus:outline-none"
+          className="group flex items-center gap-2 text-xl font-extrabold tracking-tight text-slate-900 dark:text-white focus:outline-none"
         >
-          <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-primary to-primary-dark flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-            <span className="text-[14px] font-black text-white">D</span>
+          <div className="h-7 w-7 rounded-lg bg-emerald-100 dark:bg-emerald-700/20 flex items-center justify-center border border-emerald-200 dark:border-emerald-600/30 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-700/30 transition-colors">
+            <span className="text-[14px] font-black text-emerald-700 dark:text-emerald-500">D</span>
           </div>
           <span>
-            Diinbadan<span className="text-primary transition-all group-hover:text-primary-dark">e</span>
+            Diinbadan<span className="text-emerald-600 dark:text-emerald-500">e</span>
           </span>
         </a>
 
         {/* Desktop Navigation Link Cluster */}
-        <nav className="hidden md:flex items-center gap-1.5 bg-slate-100/80 border border-slate-200/60 rounded-full p-1.5">
+        <nav className="hidden md:flex items-center gap-1.5 bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 rounded-full p-1.5">
           {navLinks.map((link) => {
             const id = link.href.slice(1);
             const isActive = activeSection === id;
@@ -104,8 +106,8 @@ export default function Navbar() {
                 onClick={(e) => handleLinkClick(e, link.href)}
                 className={`text-[13px] font-medium px-4 py-1.5 rounded-full transition-all duration-200 relative ${
                   isActive 
-                    ? "text-primary bg-primary-light font-bold" 
-                    : "text-slate-600 hover:text-slate-900"
+                    ? "text-emerald-800 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50" 
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {link.name}
@@ -114,12 +116,19 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Floating Call To Action */}
-        <div className="hidden md:block">
+        {/* Floating Call To Action & Theme Toggle */}
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors focus:outline-none"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </button>
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, "#contact")}
-            className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary-dark text-black text-xs font-bold px-4 py-2 rounded-full shadow-lg shadow-primary/10 transition-all hover:scale-105"
+            className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 dark:hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"
           >
             Hire Contractor
             <ArrowRight className="h-3 w-3" />
@@ -127,14 +136,23 @@ export default function Navbar() {
         </div>
 
         {/* Mobile drawer toggle */}
-        <button
-          id="mobile-menu-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center rounded-xl p-2.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900 md:hidden border border-slate-200"
-          aria-label="Toggle navigation drawer"
-        >
-          {isOpen ? <X className="h-5 w-5" id="icon-close" /> : <Menu className="h-5 w-5" id="icon-menu" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors focus:outline-none"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </button>
+          <button
+            id="mobile-menu-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center justify-center rounded-xl p-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-white/10"
+            aria-label="Toggle navigation drawer"
+          >
+            {isOpen ? <X className="h-5 w-5" id="icon-close" /> : <Menu className="h-5 w-5" id="icon-menu" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
@@ -146,10 +164,10 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 top-full w-full bg-white/95 border-b border-slate-200 backdrop-blur-xl md:hidden"
+            className="absolute left-0 top-full w-full bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-white/5 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-2 px-6 py-6 max-h-[80vh] overflow-y-auto">
-              <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">Navigation System</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Navigation</p>
               {navLinks.map((link) => {
                 const id = link.href.slice(1);
                 const isActive = activeSection === id;
@@ -159,10 +177,10 @@ export default function Navbar() {
                     id={`mobile-nav-${id}`}
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
-                    className={`text-sm font-semibold py-3.5 px-4 rounded-xl transition-all flex items-center justify-between ${
+                    className={`text-sm font-medium py-3.5 px-4 rounded-xl transition-all flex items-center justify-between ${
                       isActive 
-                        ? "bg-primary-light text-primary border-l-4 border-primary pl-4" 
-                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                        ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 border-l-2 border-emerald-500 pl-4" 
+                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-white"
                     }`}
                   >
                     {link.name}
@@ -171,11 +189,11 @@ export default function Navbar() {
                 );
               })}
               
-              <div className="mt-4 pt-4 border-t border-white/[0.05]">
+              <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/5">
                 <a
                   href="#contact"
                   onClick={(e) => handleLinkClick(e, "#contact")}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black text-sm font-extrabold py-3.5 rounded-xl shadow-lg transition-transform"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 dark:hover:bg-emerald-500 text-white text-sm font-bold py-3.5 rounded-xl transition-colors"
                 >
                   Schedule Consultation
                   <ArrowRight className="h-4 w-4" />

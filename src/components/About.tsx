@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Calendar, Code, Building } from "lucide-react";
+import { MapPin, Calendar, Code, Building, Cpu, Globe, Zap, Database } from "lucide-react";
 
 export default function About() {
   const stats = [
@@ -29,69 +29,60 @@ export default function About() {
     }
   ];
 
+  const focusAreas = [
+    { icon: <Cpu className="w-6 h-6" />, title: "Systems Architecture", description: "Designing scalable multi-tenant infrastructure." },
+    { icon: <Globe className="w-6 h-6" />, title: "Cloud Deployment", description: "Efficient server management and CI/CD." },
+    { icon: <Zap className="w-6 h-6" />, title: "Modern Frontend", description: "Responsive interfaces with React and Next.js." },
+    { icon: <Database className="w-6 h-6" />, title: "Data Integrity", description: "Secure, reliable database design." }
+  ];
+
   return (
-    <div className="bg-slate-50 w-full">
+    <div className="w-full bg-white dark:bg-transparent transition-colors duration-300">
       <section id="about" className="py-24 px-6 max-w-5xl mx-auto container relative">
-        {/* Background glow node */}
         <div className="absolute right-0 top-[20%] h-[300px] w-[300px] rounded-full bg-primary/10 opacity-20 -z-10" />
 
-        {/* Decorative vertical section tag */}
         <div className="mb-12">
           <span 
             id="about-label"
-            className="text-xs font-bold tracking-widest text-primary uppercase block mb-2"
+            className="text-xs font-bold tracking-widest text-emerald-600 uppercase block mb-2"
           >
-            ABOUT THE ARCHITECT
+            Capabilities
           </span>
           <h2 
             id="about-heading"
-            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900"
+            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight"
           >
-            Translating business complexity into clean, performant software systems
+            Independent software consultancy based in Mogadishu.
           </h2>
+
+          <div className="space-y-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" id="about-paragraphs">
+            <p>
+              I'm <strong className="text-slate-900 dark:text-white">Munir Abdullahi (Diinbadane)</strong>. Over the past five years, I have delivered critical digital infrastructure for government databases, multi-tenant booking platforms, compliance portals, and high-volume retail systems.
+            </p>
+            <p>
+              I prioritize clean, maintainable code using <strong className="text-slate-900 dark:text-white">Laravel, React, Inertia, Next.js</strong>, and <strong className="text-slate-900 dark:text-white">Flutter</strong>. I handle the full system lifecycle, from designing high-security user portals to deploying on customized cloud nodes.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 gap-y-10 items-start">
-          {/* Left Column Narrative */}
-          <div className="lg:col-span-7 space-y-5 text-slate-600 leading-[1.7] max-w-[520px]" id="about-bio">
-            <p>
-              I'm <strong className="text-slate-900">Munir Abdullahi (Diinbadane)</strong>. Over the past five years, I have delivered critical digital infrastructure for government databases, multi-tenant booking platforms, compliance portals, and high-volume retail systems.
-            </p>
-            <p>
-              I prioritize clean, maintainable code using <strong className="text-slate-900">Laravel, React, Inertia, Next.js</strong>, and <strong className="text-slate-900">Flutter</strong>. I handle the full system lifecycle, from designing high-security user portals to deploying on customized cloud nodes.
-            </p>
-            <p>
-              I also lead <strong className="text-slate-900">Rukun</strong>, an independent software studio in Somalia. Our central products, <strong className="text-primary font-bold">NidaamFlow</strong> and <strong className="text-primary font-bold">RukunPOS</strong>, streamline daily sales operations and management overhead for complex local businesses.
-            </p>
-          </div>
-
-          {/* Right Column: Single Cohesive Bordered Panel */}
-          <div className="lg:col-span-5 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm" id="about-facts-container">
-            <div className="space-y-4">
-              {stats.map((stat, idx) => (
-                <div 
-                  key={idx}
-                  id={`about-fact-${idx}`}
-                  className={`flex items-start gap-4 pb-4 ${idx < stats.length - 1 ? "border-b border-gray-200" : ""}`}
-                >
-                  <div className="p-2.5 bg-primary-light border border-primary/10 rounded-xl mt-0.5 flex-shrink-0">
-                    {stat.icon}
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="text-[10px] font-extrabold uppercase tracking-widest text-gray-400">
-                      {stat.label}
-                    </h3>
-                    <p className="text-sm font-bold text-slate-900">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs text-gray-500">
-                      {stat.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" id="about-focus-areas">
+          {focusAreas.map((area, idx) => (
+            <div 
+              key={idx}
+              id={`about-focus-card-${idx}`}
+              className="bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-white/5 p-6 rounded-2xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+            >
+              <div className="mb-4 text-emerald-600 dark:text-slate-500">
+                {area.icon}
+              </div>
+              <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
+                {area.title}
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                {area.description}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>

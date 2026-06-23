@@ -25,23 +25,23 @@ export default function Process() {
   ];
 
   return (
-    <div className="bg-slate-50 w-full">
+    <div className="w-full bg-slate-50 dark:bg-transparent transition-colors duration-300">
       <section id="process" className="py-24 px-6 max-w-5xl mx-auto container relative">
         {/* Section Header */}
         <div className="mb-16">
           <span 
             id="process-label"
-            className="text-xs font-bold tracking-widest text-primary uppercase block mb-2"
+            className="text-xs font-bold tracking-widest text-emerald-600 uppercase block mb-2"
           >
             How I Work
           </span>
           <h2 
             id="process-heading"
-            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-2"
+            className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-2"
           >
             A methodical blueprint from discovery to global deployment
           </h2>
-          <p className="text-sm text-slate-600 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
             I apply a predictable, multi-phase methodology that mitigates design discrepancies, maximizes compilation speeds, and secures structural integrity.
           </p>
         </div>
@@ -58,16 +58,16 @@ export default function Process() {
               id={`process-step-item-${idx}`}
             >
               {/* Number behind title */}
-              <span className="text-5xl font-black text-gray-200 select-none opacity-80 block tracking-tight font-mono">
+              <span className="text-5xl font-black text-slate-200 dark:text-slate-800 select-none opacity-80 block tracking-tight font-mono">
                 {step.num}
               </span>
 
               {/* Title and Description */}
               <div className="mt-[-10px] space-y-2 z-10">
-                <h3 className="text-base font-bold text-slate-900 tracking-tight">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white tracking-tight">
                   {step.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   {step.description}
                 </p>
               </div>
