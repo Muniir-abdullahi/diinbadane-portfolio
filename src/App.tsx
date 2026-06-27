@@ -14,7 +14,7 @@ export default function App() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("portfolio-theme");
     // Default to light if no saved theme, but if they had dark saved, use it.
     if (savedTheme === "dark") {
       setTheme("dark");
@@ -29,11 +29,11 @@ export default function App() {
     if (theme === "light") {
       setTheme("dark");
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem("portfolio-theme", "dark");
     } else {
       setTheme("light");
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+      localStorage.setItem("portfolio-theme", "light");
     }
   };
 
