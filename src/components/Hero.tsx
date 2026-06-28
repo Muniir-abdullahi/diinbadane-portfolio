@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Github, Twitter, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const handleScrollTo = (id: string) => {
@@ -18,11 +18,7 @@ export default function Hero() {
     }
   };
 
-  const socialLinks = [
-    { icon: <Github className="h-4.5 w-4.5" id="social-hero-github" />, name: "GitHub", href: "https://github.com/Muniir-abdullahi" },
-    { icon: <Twitter className="h-4.5 w-4.5" id="social-hero-twitter" />, name: "X / Twitter", href: "https://x.com/diinbadane" },
-    { icon: <Mail className="h-4.5 w-4.5" id="social-hero-mail" />, name: "muniir669@gmail.com", href: "mailto:muniir669@gmail.com" }
-  ];
+
 
   return (
     <section 
@@ -96,24 +92,7 @@ export default function Hero() {
               </button>
             </div>
 
-            {/* Social accounts shortcut links */}
-            <div className="flex items-center gap-5 pt-4" id="hero-socials-row">
-              <div className="flex items-center gap-3">
-                {socialLinks.map((link, idx) => (
-                  <a
-                    key={idx}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 p-2 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/50 rounded-md text-xs text-slate-600 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
-                    id={`hero-social-${idx}`}
-                  >
-                    {link.icon}
-                    <span className="hidden sm:inline font-medium">{link.name}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
+
 
           </div>
 
