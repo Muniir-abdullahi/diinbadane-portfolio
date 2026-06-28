@@ -81,28 +81,22 @@ export const ownProjects: OwnProject[] = [
 export const clientProjects: ClientProject[] = [
   {
     id: "kulan",
-    name: "Kulan.io — Event Management Platform",
+    name: "Event Management Platform",
     description: "A high-performance billing and ticketing ecosystem handling attendee registration, sponsor portals, scheduled meeting planners, and automated badges.",
     stack: ["Laravel", "React", "Inertia.js", "PostgreSQL", "Tailwind CSS"],
     role: "Lead Developer"
   },
-  {
-    id: "somemb",
-    name: "SOMEMB — Embassy Digital Platform",
-    description: "Consular workflow system bridging public passport registrations, visual appointment booking slots, state document repositories, and audit logs.",
-    stack: ["Laravel", "React", "Inertia.js", "Tailwind CSS", "PostgreSQL"],
-    role: "Lead Developer"
-  },
+
   {
     id: "raafort",
-    name: "Raafort Homes — Hotel Management & Booking Platform",
+    name: "Real Estate Management & Booking Platform",
     description: "Property and room portfolio management with direct real-time calendar availability queries, guest check-in calendars, and dynamic invoicing.",
     stack: ["Laravel", "React", "Inertia.js", "MySQL", "Tailwind CSS"],
     role: "Lead Developer"
   },
   {
     id: "knowledge-hub",
-    name: "Knowledge Hub — Content Management & Publishing Platform",
+    name: "Content Management & Publishing Platform",
     description: "Centralized article indexing and visual dashboard portal governing custom workflows, author submissions, and detailed permission rings.",
     stack: ["Laravel", "React", "Inertia.js", "PostgreSQL", "Tailwind CSS"],
     role: "Lead Developer"
@@ -116,7 +110,7 @@ export const clientProjects: ClientProject[] = [
   },
   {
     id: "southpay",
-    name: "SouthPay — Digital Wallet & Payout Infrastructure",
+    name: "Digital Wallet & Payout Infrastructure",
     description: "Core payout API infrastructure and client dashboard allowing merchant platforms to execute high-volume wallet ledger disbursals instantly.",
     stack: ["Laravel (API)", "Next.js", "Tailwind CSS", "External payout protocol gateways"],
     role: "Team Member"
