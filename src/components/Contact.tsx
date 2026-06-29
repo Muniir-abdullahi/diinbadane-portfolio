@@ -26,8 +26,8 @@ export default function Contact() {
     },
     {
       name: "Corporate Suite",
-      value: "rukun.app",
-      href: "https://rukun.app",
+      value: "rukun.com.so",
+      href: "https://rukun.com.so",
       icon: <Building className="h-5 w-5 text-primary" id="icon-contact-company" />,
       tagline: "Commercial SaaS operations"
     }

@@ -67,14 +67,21 @@ export const ownProjects: OwnProject[] = [
     name: "RukunPOS",
     description: "A fast, real-time POS platform optimized specifically for Somalia's fast-moving retail stores and restaurants, offering precise live stock ledgers, digital receipts, custom invoices, and deep business performance analysis.",
     stack: ["Laravel", "React", "Inertia.js", "PostgreSQL", "Tailwind CSS"],
-    link: "https://pos.rukun.app"
+    link: "https://pos.rukun.com.so/"
   },
   {
-    id: "nidaamflow",
-    name: "NidaamFlow",
+    id: "diiwaan",
+    name: "Diiwan",
     description: "An integrated business management platform consolidating customer relationships, active sales pipelines, project boards, ledger finance, ticking support desks, and programmatic WhatsApp bulk notifications into a unified dashboard.",
     stack: ["Laravel", "React", "Inertia.js", "MySQL", "Tailwind CSS"],
-    link: "https://nidaamflow.rukun.app"
+    link: "https://diiwaan.rukun.com.so/"
+  },
+  {
+    id: "maamule",
+    name: "Maamule",
+    description: "The Complete School Management Platform designed to streamline education operations with smart financial engines, academic tracking, and advanced student portal features.",
+    stack: ["Laravel", "React", "Inertia.js", "MySQL", "Tailwind CSS"],
+    link: "https://maamule.rukun.com.so/"
   }
 ];
 

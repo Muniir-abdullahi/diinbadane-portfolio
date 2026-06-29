@@ -20,7 +20,7 @@ export default function Footer() {
     },
     {
       icon: <Building className="h-4.5 w-4.5" id="footer-icon-company" />,
-      href: "https://rukun.app",
+      href: "https://rukun.com.so",
       label: "Corporate Suite"
     }
   ];

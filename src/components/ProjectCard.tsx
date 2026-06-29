@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, ShoppingCart, LayoutGrid } from "lucide-react";
+import { ArrowUpRight, ShoppingCart, LayoutGrid, BookOpen } from "lucide-react";
 import { OwnProject } from "../lib/data";
 
 interface ProjectCardProps {
@@ -11,7 +11,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const isLive = project.link && project.link !== "#";
   const category = "SaaS - Monthly";
-  const Icon = project.id === "nidaamflow" ? LayoutGrid : ShoppingCart;
+  const Icon = project.id === "diiwaan" ? LayoutGrid : project.id === "maamule" ? BookOpen : ShoppingCart;
 
   return (
     <article 

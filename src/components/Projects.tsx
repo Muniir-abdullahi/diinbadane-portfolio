@@ -45,7 +45,7 @@ export default function Projects() {
             </div>
             
             <a
-              href="https://rukun.app"
+              href="https://rukun.com.so"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-primary-dark transition-all group"
@@ -56,7 +56,7 @@ export default function Projects() {
             </a>
           </div>
 
-          {/* Grid for RukunPOS and NidaamFlow */}
+          {/* Grid for RukunPOS, Diiwaan, and Maamule */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ownProjects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
@@ -66,13 +66,13 @@ export default function Projects() {
           {/* Inline footer CTA */}
           <div className="flex justify-center pt-4" id="own-projects-footer">
             <a
-              href="https://rukun.app"
+              href="https://rukun.com.so"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-white transition-all group bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 rounded-lg px-5 py-2.5"
               id="link-visit-rukun-footer"
             >
-              Explore the complete Rukun brand suite at rukun.app
+              Explore the complete Rukun brand suite at rukun.com.so
               <ArrowUpRight className="h-3.5 w-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-primary" />
             </a>
           </div>
